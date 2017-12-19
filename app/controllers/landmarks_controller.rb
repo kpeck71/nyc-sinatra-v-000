@@ -41,11 +41,11 @@ class LandmarksController < ApplicationController
     @landmark.update(params[:landmark])
 
     if !params[:name].empty?
-      @landmark.name = Landmark.create(name: params[:name])
+      @landmark.name = params[:name])
     end
 
     if !params[:year_completed].empty?
-      @landmark.year_completed = Landmark.create(year_completed: params[:year_completed])
+      @landmark.year_completed = params[:year_completed])
     end
 
     @landmark.save
