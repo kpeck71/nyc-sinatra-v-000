@@ -4,7 +4,7 @@
 <form action="/landmarks/<%= @landmark.id %>" method="POST">
 <input id="hidden" type="hidden" name="_method" value="patch">
 
-<label><p><strong>New Name: <input type="text" name="figure[name]" id="figure_name"></strong></p></label>
+<label><p><strong>New Name: <input type="text" name="landmark[name]" id="landmark_name"></strong></p></label>
 
 <label><p><strong>Choose New Title</strong></p></label>
 <% Title.all.each do |title| %>
