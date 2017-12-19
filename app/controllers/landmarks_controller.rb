@@ -24,11 +24,11 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
     @landmark = Landmark.create(params["landmark"])
      if !params[:landmark][:name].empty?
-       @landmark.name = Landmark.create(name: params[:landmark][:name])
+       @landmark.name = Landmark.create(name: params[:landmark[:name])
      end
-     
+
      if !params[:year_completed].empty?
-       @landmark.year_completed << Landmark.create(params[:landmark][:year_completed])
+       @landmark.year_completed << Landmark.create(params[:year_completed])
      end
 
      @landmark.save
