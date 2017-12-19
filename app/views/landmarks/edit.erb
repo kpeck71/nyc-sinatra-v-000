@@ -14,12 +14,5 @@
   <% end %>
 <p>And/Or Create New Title: <input type="text" name="title[name]" id="new_title_name"></input></p>
 
-<label><p><strong>Landmark: <%Landmark.all.each do |landmark|%></strong></p></label>
-  <label><%=landmark.name%></label>
-  <input type="checkbox" name="figure[landmark_ids][]" value="<%=landmark.id%>" id="<%= landmark.name %>" <%='checked' if @figure.landmarks.include?(landmark) %>></input>
-  <br>
-<%end%>
-<p>And/or Create New Landmark: <input type="text" name="landmark[name]" id="new_landmark"></input></p>
-  <br>
 <input type="submit" value="Edit Figure">
 </form>
