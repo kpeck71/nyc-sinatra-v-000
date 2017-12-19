@@ -10,7 +10,7 @@ Title: <%Title.all.each do |title|%>
 Landmark: <%Landmark.all.each do |landmark|%>
   <input type="checkbox" name="figure[landmark]" id="<%= landmark.name %>" value="<%=landmark.id%>"><%=landmark.name%></input>
 <%end%>
-
+<label>Or, Create New Landmark</label>
 
 <input type="submit" value="Create New Figure">
 </form>
