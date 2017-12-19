@@ -14,7 +14,7 @@
 <p>Or Create New Title: <input type="text" name="figure[title]" id="new_title_name"></input></p>
 
 <label><p><strong>Landmark: <%Landmark.all.each do |landmark|%></strong></p></label>
-  <input type="checkbox" name="figure[landmark]" id="<%= landmark.name %>" value="<%=landmark.id%>"><%=landmark.name%></input>
+  <input type="checkbox" name="figure[landmark]" id="<%= landmark.name %>" value="<%=landmark.id%>"><%=landmark.name%><%='checked' if @figure.landmark.include?(landmark) %></input>
   <br>
 <%end%>
 <p>New Landmark: <input type="text" name="figure[landmark]" id="new_landmark"></input></p>
