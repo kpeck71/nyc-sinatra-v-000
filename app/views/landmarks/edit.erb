@@ -6,13 +6,5 @@
 
 <label><p><strong>New Name: <input type="text" name="landmark[name]" id="landmark_name"></strong></p></label>
 
-<label><p><strong>Choose New Title</strong></p></label>
-<% Title.all.each do |title| %>
-    <label><%= title.name %></label>
-    <input type="checkbox" name="landmark[title_ids][]" value="<%= title.id %>" id="<%= title.name %>" <%='checked' if @landmark.titles.include?(title) %>></input>
-    </br>
-  <% end %>
-<p>And/Or Create New Title: <input type="text" name="title[name]" id="new_title_name"></input></p>
-
-<input type="submit" value="Edit Figure">
+<input type="submit" value="Edit Landmark">
 </form>
