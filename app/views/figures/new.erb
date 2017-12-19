@@ -1,0 +1,14 @@
+<h2>Update <%= @figure.name %></h2>
+
+<form action="/figures/<%= @figure.id %>" method="POST">
+<input id="hidden" type="hidden" name="_method" value="patch">
+Figure Name: <input type="text" name="figure[name]" id="figure_name">
+<br>
+Title: <input type="text" name="figure[title]" id="title_name"></input>
+<br>
+Landmark: <%Landmark.all.each do |landmark|%>
+  <input type="checkbox" name="figure[landmark]" id="<%= landmark.name %>" value="<%=landmark.id%>"><%=landmark.name%></input>
+<%end%>
+
+<input type="submit" value="Save">
+</form>
