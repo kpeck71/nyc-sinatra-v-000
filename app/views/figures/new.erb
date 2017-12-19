@@ -3,8 +3,8 @@
 <form action="/figures" method="POST">
 Figure Name: <input type="text" name="figure[name]" id="figure_name">
 <br>
-Title: <%Title.all.each do |landmark|%>
-  <input type="checkbox" name="figure[landmark]" id="<%= landmark.name %>" value="<%=landmark.id%>"><%=landmark.name%></input>
+Title: <%Title.all.each do |title|%>
+  <input type="checkbox" name="figure[title]" id="<%= title.name %>" value="<%=title.id%>"><%=title.name%></input>
 <%end%>
 <br>
 Landmark: <%Landmark.all.each do |landmark|%>
