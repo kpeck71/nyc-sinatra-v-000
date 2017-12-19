@@ -44,7 +44,7 @@ class FiguresController < ApplicationController
     end
 
     if !params[:title][:name].empty?
-      @figure.titles = Title.create(params[:title])
+      @figure.titles = Title.find_or_create_by(params[:title])
     end
 
     @figure.save
