@@ -28,7 +28,7 @@ class LandmarksController < ApplicationController
      end
 
      if !params[:year_completed].empty?
-       @landmark.year_completed << Landmark.create(params[:year_completed])
+       @landmark.year_completed = Landmark.create(params[:year_completed])
      end
 
      @landmark.save
