@@ -3,7 +3,7 @@
 <form action="/figures/<%= @figure.id %>" method="POST">
 <input id="hidden" type="hidden" name="_method" value="patch">
 
-<label><p><strong>Figure Name: <input type="text" name="figure[name]" id="figure_name"></strong></p></label>
+<label><p><strong>Update Name: <input type="text" name="figure[name]" id="figure_name"></strong></p></label>
 
 <label><p><strong>Update Title</strong></p></label>
 <% Title.all.each do |title| %>
