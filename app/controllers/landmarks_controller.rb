@@ -43,10 +43,10 @@ class LandmarksController < ApplicationController
     if !params[:landmark][:name].empty?
       @landmark.name = Landmark.create(name: params[:landmark][:name])
     end
-    #
-    # if !params[:title][:name].empty?
-    #   @landmark.titles << Title.create(params[:title])
-    # end
+    
+    if !params[:year_completed].empty?
+      @landmark.titles << Title.create(params[:title])
+    end
 
     @landmark.save
 
