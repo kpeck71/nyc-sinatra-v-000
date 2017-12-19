@@ -22,6 +22,7 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
+    binding.pry
     @landmark = Landmark.create(params["landmark"])
      if !params[:landmark][:name].empty?
        @landmark.name = Landmark.create(name: params[:landmark][:name])
