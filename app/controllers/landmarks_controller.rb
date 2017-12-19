@@ -40,11 +40,11 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
 
-    if !params[:name].empty?
+    if !params[:name].nil?
       @landmark.name = params[:name]
     end
 
-    if !params[:year_completed].empty?
+    if !params[:year_completed].nil?
       @landmark.year_completed = params[:year_completed]
     end
 
