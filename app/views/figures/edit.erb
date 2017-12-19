@@ -14,7 +14,7 @@ New Title: <input type="text" name="figure[title]" id="new_title_name"></input>
 Landmark: <%Landmark.all.each do |landmark|%>
   <input type="checkbox" name="figure[landmark]" id="<%= landmark.name %>" value="<%=landmark.id%>"><%=landmark.name%></input>
 <%end%>
-New Landmark: <input type="text" name="figure[title]" id="new_title_name"></input>
+New Landmark: <input type="text" name="figure[landmark]" id="new_landmark_name"></input>
   <br>
 <input type="submit" value="Update Figure">
 </form>
