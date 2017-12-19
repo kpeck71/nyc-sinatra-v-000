@@ -11,7 +11,7 @@
 <label><p>Or, Create New Title:</p></label>
 <input type="text" id="new_title" name="title[name]">
 
-<label><p>Landmarks</p></label>
+<label><p><strong>Landmarks</strong></p></label>
   <% Landmark.all.each do |landmark| %>
     <label><%= landmark.name %></label>
     <input type="checkbox" id="landmark_<%=landmark.id%>" name="figure[landmark_ids][]" value="<%= landmark.id %>"><br>
