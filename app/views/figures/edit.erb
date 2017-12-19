@@ -4,7 +4,7 @@
 <input id="hidden" type="hidden" name="_method" value="patch">
 Figure Name: <input type="text" name="figure[name]" id="figure_name">
 <br>
-<label>Update Title</label>
+<label><p><strong>Update Title</strong></p></label>
 <% Title.all.each do |title| %>
     <label><%= title.name %></label>
     <input type="checkbox" name="figure[title_ids][]" value="<%= title.id %>" id="<%= title.name %>" <%='checked' if @figure.titles.include?(title) %>
