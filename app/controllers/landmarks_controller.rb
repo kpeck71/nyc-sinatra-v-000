@@ -11,20 +11,20 @@ class LandmarksController < ApplicationController
   end
 
   get '/landmarks/:id' do
-    @landmark = landmark.find(params[:id])
+    @landmark = Landmark.find(params[:id])
 
     erb :'/landmarks/show'
   end
 
   get '/landmarks/:id/edit' do
-    @landmark = landmark.find(params[:id])
+    @landmark = Landmark.find(params[:id])
     erb :'/landmarks/edit'
   end
 
   post '/landmarks' do
-    @landmark = landmark.create(params["landmark"])
+    @landmark = Landmark.create(params["landmark"])
      if !params[:landmark][:name].empty?
-       @landmark.landmarks << landmark.create(params[:landmark])
+       @landmark.landmarks << Landmark.create(params[:landmark])
      end
 
      if !params[:title][:name].empty?
@@ -37,11 +37,11 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks/:id' do
-    @landmark = landmark.find(params[:id])
+    @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
 
     if !params[:landmark][:name].empty?
-      @landmark.landmarks << landmark.create(params[:landmark])
+      @landmark.landmarks << Landmark.create(params[:landmark])
     end
 
     if !params[:title][:name].empty?
